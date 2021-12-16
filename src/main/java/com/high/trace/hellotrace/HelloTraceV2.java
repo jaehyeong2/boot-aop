@@ -32,18 +32,7 @@ public class HelloTraceV2 {
         complete(status, null);
     };
     public void exception(TraceStatus status, Exception e){
-        Long stopTimeMs = System.currentTimeMillis();
-        long resultTimeMs = stopTimeMs - status.getStartTimeMs();
-        TraceId traceId = status.getTraceId();
-        if (e == null) {
-            log.info("[{}] {}{} time={}ms", traceId.getId(),
-                    addSpace(COMPLETE_PREFIX, traceId.getLevel()), status.getMessage(),
-                    resultTimeMs);
-        } else {
-            log.info("[{}] {}{} time={}ms ex={}", traceId.getId(),
-                    addSpace(EX_PREFIX, traceId.getLevel()), status.getMessage(), resultTimeMs,
-                    e.toString());
-        }
+        complete(status,e);
     }
 
     private void complete(TraceStatus status, Exception e) {
