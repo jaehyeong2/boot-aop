@@ -3,6 +3,7 @@ package com.high;
 import com.high.proxy.config.AppV1Config;
 import com.high.proxy.config.AppV2Config;
 import com.high.proxy.config.AppV3Config;
+import com.high.proxy.config.v1_proxy.ConcreteProxyConfig;
 import com.high.proxy.config.v1_proxy.InterfaceProxyConfig;
 import com.high.trace.logtrace.LogTrace;
 import com.high.trace.logtrace.ThreadLocalLogTrace;
@@ -13,7 +14,8 @@ import org.springframework.context.annotation.Import;
 
 
 //@Import({AppV1Config.class, AppV2Config.class})
-@Import(InterfaceProxyConfig.class)
+//@Import(InterfaceProxyConfig.class)
+@Import(ConcreteProxyConfig.class)
 @SpringBootApplication(scanBasePackages = "com.high.proxy.app")
 public class HighApplication {
 
