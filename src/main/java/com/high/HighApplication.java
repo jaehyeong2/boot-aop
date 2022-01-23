@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Import;
 
 //@Import({AppV1Config.class, AppV2Config.class})
 //@Import(InterfaceProxyConfig.class)
-@Import(ConcreteProxyConfig.class)
-@SpringBootApplication(scanBasePackages = "com.high.proxy.app")
+//@Import(ConcreteProxyConfig.class)
+@SpringBootApplication(scanBasePackages = "com.high.aop")
 public class HighApplication {
 
 	public static void main(String[] args) {
