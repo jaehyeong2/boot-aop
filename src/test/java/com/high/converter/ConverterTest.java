@@ -1,4 +1,4 @@
-package com.high.coverter;
+package com.high.converter;
 
 import com.high.mvc2.converter.IntegerToStringConverter;
 import com.high.mvc2.converter.IpPortToStringConverter;
