@@ -1,8 +1,6 @@
 package com.high.proxy.config.v1_proxy.concrete_proxy;
-import com.high.aop.v2.OrderServiceV2;
 import com.high.proxy.app.v2.OrderControllerV2;
 import com.high.trace.TraceStatus;
-import com.high.trace.hellotrace.HelloTraceV2;
 import com.high.trace.logtrace.LogTrace;
 
 public class OrderControllerConcreteProxy extends OrderControllerV2 {
