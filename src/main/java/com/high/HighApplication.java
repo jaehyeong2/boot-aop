@@ -7,6 +7,8 @@ import com.high.proxy.config.v1_proxy.ConcreteProxyConfig;
 import com.high.proxy.config.v1_proxy.InterfaceProxyConfig;
 import com.high.proxy.config.v2_dynamicproxy.DynamicProxyBasicConfig;
 import com.high.proxy.config.v2_dynamicproxy.DynamicProxyFilterConfig;
+import com.high.proxy.config.v3_proxyfactory.ProxyFactoryConfigV1;
+import com.high.proxy.config.v3_proxyfactory.ProxyFactoryConfigV2;
 import com.high.trace.logtrace.LogTrace;
 import com.high.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -19,7 +21,9 @@ import org.springframework.context.annotation.Import;
 //@Import(InterfaceProxyConfig.class)
 //@Import(ConcreteProxyConfig.class)
 //@Import(DynamicProxyBasicConfig.class)
-@Import(DynamicProxyFilterConfig.class)
+//@Import(DynamicProxyFilterConfig.class)
+//@Import(ProxyFactoryConfigV1.class)
+@Import(ProxyFactoryConfigV2.class)
 @SpringBootApplication(scanBasePackages = "com.high.aop")
 public class HighApplication {
 
