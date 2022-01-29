@@ -10,6 +10,7 @@ import com.high.proxy.config.v2_dynamicproxy.DynamicProxyFilterConfig;
 import com.high.proxy.config.v3_proxyfactory.ProxyFactoryConfigV1;
 import com.high.proxy.config.v3_proxyfactory.ProxyFactoryConfigV2;
 import com.high.proxy.config.v4_postprocessor.BeanPostProcessorConfig;
+import com.high.proxy.config.v5_autoproxy.AutoProxyConfg;
 import com.high.trace.logtrace.LogTrace;
 import com.high.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -25,7 +26,8 @@ import org.springframework.context.annotation.Import;
 //@Import(DynamicProxyFilterConfig.class)
 //@Import(ProxyFactoryConfigV1.class)
 //@Import(ProxyFactoryConfigV2.class)
-@Import(BeanPostProcessorConfig.class)
+//@Import(BeanPostProcessorConfig.class)
+@Import(AutoProxyConfg.class)
 @SpringBootApplication(scanBasePackages = "com.high.aop")
 public class HighApplication {
 
